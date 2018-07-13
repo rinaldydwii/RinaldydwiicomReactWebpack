@@ -1,0 +1,42 @@
+@import 'components/reset',
+'master';
+
+body {
+    font-family: $lato;
+    font-size: 16px;
+    @include breakpoint(0, 767px) {
+        font-size: 14px;
+    }
+}
+
+.container {
+    position: relative;
+    max-width: 1080px;
+    margin: 0 auto;
+    @include breakpoint(0, 1120px) {
+        max-width: none;
+        margin: 0 20px;
+    }
+    @include breakpoint(0, 767px) {
+        margin: 0 10px;
+    }
+}
+.button {
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    display: inline-block;
+    border-radius: 20px;
+    text-decoration: none;
+    &:hover {
+        background: grey;
+        transition: all 0.3s linear;
+    }
+}
+.hidden {
+    &-sm {
+        @include breakpoint(0, 991px) {
+            display: none;
+        }
+    }
+}

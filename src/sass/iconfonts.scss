@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "rinaldydwiicom";
+  src:url("../fonts/rinaldydwiicom.eot");
+  src:url("../fonts/rinaldydwiicom.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/rinaldydwiicom.woff") format("woff"),
+    url("../fonts/rinaldydwiicom.ttf") format("truetype"),
+    url("../fonts/rinaldydwiicom.svg#rinaldydwiicom") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "rinaldydwiicom" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "rinaldydwiicom" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-twitter:before {
+  content: "\6b";
+}
+.icon-menu:before {
+  content: "\6c";
+}
+.icon-mail:before {
+  content: "\6d";
+}
+.icon-home:before {
+  content: "\6f";
+}
+.icon-github:before {
+  content: "\70";
+}
+.icon-dribbble:before {
+  content: "\71";
+}
+.icon-instagram:before {
+  content: "\61";
+}
+.icon-portfolio:before {
+  content: "\62";
+}
+.icon-blog:before {
+  content: "\63";
+}
+.icon-contact:before {
+  content: "\64";
+}
+.icon-about:before {
+  content: "\65";
+}

@@ -1,0 +1,45 @@
+@import 'required';
+
+#contact {
+    background: white;
+    .contact {
+        &__description {
+            margin-bottom: 30px;
+            p {
+                line-height: 200%;
+            }
+            @include breakpoint(0, 767px) {
+                margin-top: 30px;
+            }
+        }
+        &__form {
+            form {
+                width: 100%;
+            }
+            input, textarea {
+                display: block;
+                padding: 10px 20px;
+                font-size: 16px;
+                font-family: $lato;
+                margin: 0 auto 20px;
+                outline: none;
+                border: none;
+                border-bottom: black 1px solid;
+                @include breakpoint(0, 767px) {
+                    font-size: 14px;
+                }
+            }
+            textarea {
+                resize: vertical;
+                min-height: 100px;
+            }
+            input[type=text], input[type=email], input[type=tel], textarea {
+                width: 450px;
+                // background: whitesmoke;
+                @include breakpoint(0, 767px) {
+                    width: 80%;
+                }
+            }
+        }
+    }
+}

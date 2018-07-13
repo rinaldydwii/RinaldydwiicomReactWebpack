@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|PT+Serif:700|Ubuntu:700');
+
+@import 'components/reset',
+'components/fonts',
+'components/responsive';
+
+body {
+    font-family: $lato;
+    font-size: 16px;
+    @include breakpoint(0, 480px) {
+        font-size: 14px;
+    }
+}
+.container {
+    position: relative;
+    max-width: 1080px;
+    margin: 0 auto;
+    @include breakpoint(0, 1120px) {
+        max-width: none;
+        margin: 0 20px;
+    }
+    @include breakpoint(0, 767px) {
+        margin: 0 15px;
+    }
+    @include breakpoint(0, 320px) {
+        margin: 0 10px;
+    }
+}
+.button {
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    display: inline-block;
+    border-radius: 20px;
+    text-decoration: none;
+    &:hover {
+        background: grey;
+        transition: all 0.3s linear;
+    }
+}
+.hidden {
+    &-xs {
+        @include breakpoint(xs) {
+            display: none;
+        }
+    }
+    &-sm {
+        @include breakpoint(sm) {
+            display: none;
+        }
+    }
+    &-md {
+        @include breakpoint(md) {
+            display: none;
+        }
+    }
+    &-lg {
+        @include breakpoint(lg) {
+            display: none;
+        }
+    }
+}
+#header {
+    height: 100vh;
+}
+#header, #blog, #portfolio, #about, #contact {
+    text-align: center;
+}
+section {
+    .container {
+        padding: 80px 0 50px;
+        @include breakpoint(0, 767px) {
+            padding: 80px 0 40px;
+        }
+    }
+    .section {
+        &__title {
+            font-size: 72px;
+            font-family: $ptserif;
+            margin-bottom: 50px;
+            @include breakpoint(0, 767px) {
+                font-size: 56px;
+                margin-bottom: 20px;
+            }
+            @include breakpoint(0, 480px) {
+                font-size: 42px;
+            }
+        }
+    }
+}
+
+@import 'iconfonts.scss';

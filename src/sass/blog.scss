@@ -1,0 +1,92 @@
+@import 'required';
+
+#blog {
+    background: white;
+    .blog {
+        &__list {
+            margin-bottom: 40px;
+            @include breakpoint(0, 767px) {
+                margin-bottom: 20px;
+            }
+        }
+        &__item {
+            text-align: left;
+            max-width: 850px;
+            padding: 15px;
+            margin: 0 auto;
+            text-decoration: none;
+            color: black;
+            display: grid;
+            grid-template-columns: 25% 75%;
+            @include breakpoint(0, 768px) {
+                grid-template-columns: 32% 68%;
+            }
+            @include breakpoint(0, 767px) {
+                grid-template-columns: 25% 75%;
+                padding: 10px;
+            }
+            .item {
+                &__thumbnail {
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        @include breakpoint(0, 767px) {
+                            width: 170%;
+                            float: left;
+                        }
+                    }
+                }
+                &__content {
+                    padding-left: 15px;
+                    @include breakpoint(0, 767px) {
+                        padding-left: 10px;
+                    }
+                    .content {
+                        &__info {
+                            font-family: $ubuntu;
+                            font-size: 15px;
+                            margin-bottom: 5px;
+                            @include breakpoint(0, 480px) {
+                                font-size: 12px;
+                            }
+                            .info__time {
+                                text-transform: uppercase;
+                                @include breakpoint(0, 767px) {
+                                    display: none;
+                                }
+                            }
+                            .info__bull {
+                                margin: 0 4px !important;
+                                @include breakpoint(0, 767px) {
+                                    display: none;
+                                }
+                            }
+                        }
+                        &__title {
+                            font-size: 18px;
+                            font-weight: 700;
+                            margin-bottom: 10px;
+                            line-height: 20px;
+                            @include breakpoint(0, 480px) {
+                                font-size: 15px;
+                                margin-bottom: 0;
+                            }
+                        }
+                        &__description {
+                            color: grey;
+                            line-height: 20px;
+                            font-weight: 300;
+                            @include breakpoint(0, 480px) {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            &:hover {
+                background: whitesmoke;
+                transition: background 0.5s ease;
+            }
+        }
+    }
+}

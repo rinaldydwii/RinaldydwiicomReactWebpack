@@ -1,0 +1,37 @@
+@import 'required';
+
+header {
+    background: white;
+    position: relative;
+    overflow: hidden;
+    .header {
+        &__title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            h1, div {
+                transform: translate(-50%, -50%);
+            }
+            h1 {
+                font-family: $ptserif;
+                font-size: 72px;
+                @include breakpoint(0, 767px) {
+                    font-size: 56px;
+                }
+            }
+            div {
+                font-size: 24px;
+            }
+        }
+    }
+    .button {
+        position: absolute;
+        left: 50%;
+        top: 85%;
+        transform: translate(-50%);
+        @include breakpoint(0, 767px) {
+            top: 80%;
+        }
+    }
+}
